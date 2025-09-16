@@ -19,7 +19,7 @@ The architecture is designed to be highly available by distributing resources ac
 
 The following diagram illustrates the network and component layout for this project.
 
-[[vpc-example-private-subnets.png]]
+<img src="vpc-example-private-subnets.png" alt="" />
 
 ### Step-by-Step Implementation Guide
 
