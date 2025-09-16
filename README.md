@@ -29,7 +29,7 @@ The following diagram illustrates the network and component layout for this proj
 - I configured the VPC to span **two Availability Zones** and included two public subnets and two private subnets to ensure high availability.
 - A **NAT Gateway** was deployed in each Availability Zone within the public subnets to provide internet access to the private instances.
 
-[[vpc resource map.png]]
+<img src="vpc resource map.png" alt="Screenshot of the VPC configuration in the AWS Console" />
 
 #### 2. Auto Scaling Group and Launch Template
 
@@ -37,8 +37,8 @@ The following diagram illustrates the network and component layout for this proj
 - A new **Security Group** was created for the instances, allowing inbound traffic on **Port 8000** for the application and **Port 22** for SSH access.
 - I then created an **Auto Scaling Group**, associating it with the Launch Template. The ASG was configured to maintain a desired capacity of **two instances** within the private subnets.
 
+<img src="auto scaling group.png" alt="Auto Scaling Group and Launch Template" />
 
-[[auto scaling group.png]]
 #### 3. Bastion Host and Application Deployment
 
 - To securely access the private instances, I launched a **Bastion Host** (a standard EC2 instance) in one of the public subnets.
@@ -53,7 +53,8 @@ The following diagram illustrates the network and component layout for this proj
 - The ALB was configured to forward all incoming traffic from **Port 80** to the new target group.
 - After the ALB was provisioned, I had to update its security group to allow inbound traffic on Port 80 to ensure it could receive requests from the internet.
 
-[[load balancer.png]]
+<img src="load balancer.png" alt="Application Load Balancer" />
+
 ### Conclusion
 
 This project provided valuable hands-on experience in building a robust cloud infrastructure from the ground up. It reinforced my understanding of VPC networking, high availability, and the importance of security best practices in a production environment.
